@@ -1,4 +1,4 @@
-# OPA Test - TJ# OPA
+# OPA Test - TJ's test notes for OPA policy
 
 ## Notes
 
