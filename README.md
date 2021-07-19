@@ -33,3 +33,27 @@ Setup
 
 * Docker installation
 https://docs.docker.com/docker-for-mac/install/
+* Install OPA 
+```
+curl -L -o opa \
+https://openpolicyagent.org/downloads/latest/opa_darwin_amd64; \
+chmod 755 ./opa
+```
+* Run OPA Playground policy
+```
+./opa run --server \
+--log-format text \
+--set decision_logs.console=true \
+--set bundles.play.polling.min_delay_seconds=5 \
+--set bundles.play.polling.max_delay_seconds=10 \
+--set services.play.url=https://play.openpolicyagent.org \
+--set bundles.play.resource=bundles/9WnO8Siyaw
+```
+Error
+```
+pod error CrashLoopBackOff 
+
+
+Fix
+
+ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#defining-a-command-and-arguments-when-you-create-a-pod
