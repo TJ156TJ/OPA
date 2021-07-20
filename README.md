@@ -83,4 +83,7 @@ test with kubectl port-forward svc/http-echo 8080:5678
     Container has the same readiness and liveness probe
             Using the same probe for liveness and readiness is very likely dangerous. Generally it's better to avoid the livenessProbe than re-using the readinessProbe.
             More information: https://github.com/zegl/kube-score/blob/master/README_PROBES.md
+```
 
+brew install k9s
+k9s -c pod
