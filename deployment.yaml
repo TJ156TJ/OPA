@@ -40,7 +40,7 @@ spec:
         - readOnly: true
           mountPath: /config
           name: proxy-config
-        command:
+        args:
         - "envoy"
         - "--config-path"
         - "/config/envoy.yaml"
@@ -55,7 +55,7 @@ spec:
         - readOnly: true
           mountPath: /policy
           name: opa-policy
-        args:
+        command:
         - "run"
         - "--server"
         - "--addr=localhost:8181"
