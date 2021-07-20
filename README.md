@@ -49,11 +49,15 @@ chmod 755 ./opa
 --set services.play.url=https://play.openpolicyagent.org \
 --set bundles.play.resource=bundles/9WnO8Siyaw
 ```
-Error
-```
+## Error
+
 pod error CrashLoopBackOff 
 
 
-Fix
+* Fix
+```
+kubectl describe pod 
 
- https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#defining-a-command-and-arguments-when-you-create-a-pod
+Not much info
+```
+``` 
