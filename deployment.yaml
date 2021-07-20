@@ -64,7 +64,7 @@ spec:
         - "--set=plugins.envoy_ext_authz_grpc.path=envoy/authz/allow"
         - "--set=decision_logs.console=true"
         - "--ignore=.*"
-        - "/policy/policy.rego"
+        - "/policy.rego"
         livenessProbe:
           httpGet:
             path: /health?plugins
