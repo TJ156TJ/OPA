@@ -67,11 +67,11 @@ spec:
         - "/policy/policy.rego"
         livenessProbe:
           httpGet:
-            path: /health?plugins
-            scheme: HTTP
-            port: 8282
-          initialDelaySeconds: 5
-          periodSeconds: 5
+            path: 
+            scheme: 
+            port: 
+          initialDelaySeconds: 
+          periodSeconds: 
         readinessProbe:
           httpGet:
             path: /health?plugins

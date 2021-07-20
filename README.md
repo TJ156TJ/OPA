@@ -64,6 +64,15 @@ kubectl delete deployment ..........
 kubectl get events
 kubectl get nodes
 kubectl cluster-info dump
+```
 
 ```
-``` 
+test Deployment
+kubectl apply -f test-deployment.yaml
+test with kubectl port-forward svc/http-echo 8080:5678
+ visit http://localhost:8080
+```
+
+```
+	brew install kube-score/tap/kube-score
+
