@@ -40,7 +40,7 @@ spec:
         - readOnly: true
           mountPath: /config
           name: proxy-config
-        args:
+        command:
         - "envoy"
         - "--config-path"
         - "/config/envoy.yaml"
@@ -76,7 +76,7 @@ spec:
           httpGet:
             path: /health?plugins
             scheme: HTTP
-            port: 8281
+            port: 8282
           initialDelaySeconds: 5
           periodSeconds: 5
       volumes:
