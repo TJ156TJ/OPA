@@ -54,10 +54,16 @@ chmod 755 ./opa
 pod error CrashLoopBackOff 
 
 
-* Fix
+* Troubleshoot commands
 ```
-kubectl describe pod 
 
-Not much info
+kubectl get pods
+kubectl describe pod 
+kubectl get deployment
+kubectl delete deployment ..........
+kubectl get events
+kubectl get nodes
+kubectl cluster-info dump
+
 ```
 ``` 
