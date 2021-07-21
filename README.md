@@ -54,45 +54,32 @@ chmod 755 ./opa
 
 pod error CrashLoopBackOff 
 
+Resolution: Created fine on AKS so Problem was with Minikube. Delete all reousrces and recreate them solved the issue
 
 
 
-## Troubleshoot commands
+
+##  Command list
 ```
 
 kubectl get pods
 kubectl describe pod 
 kubectl get deployment
 kubectl delete deployment ..........
+kubectl get deployment -A
 kubectl get events
 kubectl get nodes
 kubectl cluster-info dump
+kubectl get cm
+kubectl get cm proxy-config
+kubectl get cm proxy-config -oyaml
+kubectl get cm -A
 k9s -c pod
 ```
 ## Notes
 
-brew install k9s
-brew install yamllint
-
-
-
-
-```
-test Deployment
-kubectl apply -f test-deployment.yaml
-test with kubectl port-forward svc/http-echo 8080:5678
- visit http://localhost:8080
-```
-
-```
-	brew install kube-score/tap/kube-score
-    kube-score score deployment.yaml
-```
-   
-    result
-```
-    Container has the same readiness and liveness probe
-            Using the same probe for liveness and readiness is very likely dangerous. Generally it's better to avoid the livenessProbe than re-using the readinessProbe.
-            More information: https://github.com/zegl/kube-score/blob/master/README_PROBES.md
-```
+* brew install k9s
+* brew install yamllint
+* brew install kube-score/tap/kube-score
+* kube-score score deployment.yaml
 
