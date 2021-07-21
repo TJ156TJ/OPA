@@ -27,7 +27,8 @@ Output
 
 As output, please write up your process, results, and any other thoughts you consider relevant. Also, please be sure to include the policy code and tests for the additional policy.
 
-## Notes
+
+## Process
 
 Setup
 
@@ -49,12 +50,14 @@ chmod 755 ./opa
 --set services.play.url=https://play.openpolicyagent.org \
 --set bundles.play.resource=bundles/9WnO8Siyaw
 ```
-## Error
+* Error
 
 pod error CrashLoopBackOff 
 
 
-* Troubleshoot commands
+
+
+## Troubleshoot commands
 ```
 
 kubectl get pods
@@ -64,7 +67,15 @@ kubectl delete deployment ..........
 kubectl get events
 kubectl get nodes
 kubectl cluster-info dump
+k9s -c pod
 ```
+## Notes
+
+brew install k9s
+brew install yamllint
+
+
+
 
 ```
 test Deployment
@@ -85,5 +96,3 @@ test with kubectl port-forward svc/http-echo 8080:5678
             More information: https://github.com/zegl/kube-score/blob/master/README_PROBES.md
 ```
 
-brew install k9s
-k9s -c pod
