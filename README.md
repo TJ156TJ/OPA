@@ -36,7 +36,7 @@ As output, please write up your process, results, and any other thoughts you con
 Method
 
 * install new installation of Docker onto my Macbook
-* Install the following relevant extensions in VS code (Docker Rego Lint, Open policy agent)
+* Install the following relevant extensions in VS code (Docker, Rego Lint, Open policy agent)
 * Run through tutorial and create the code structure 
 * Change policy.rego with the DELETE varaible and test in rego playground
 
