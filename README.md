@@ -1,5 +1,7 @@
 # OPA Test - TJ's test notes for OPA policy
 
+NB: Drop down to New policy solution section for method
+
 ## Task
 
  Styra Technical Exercise
