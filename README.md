@@ -31,6 +31,46 @@ As output, please write up your process, results, and any other thoughts you con
 
 ## Process
 
+New policy added to policy.rego
+```
+action_allowed {
+  http_request.method == "DELETE"
+  token.payload.role == "admin"
+  glob.match("/people", ["/"], http_request.path)
+}
+```
+
+Test 1 in rego playground https://play.openpolicyagent.org/p/Om8GUFQNi7
+
+![Test1] (Evaluate_Delete.png)
+
+
+
+
+
+
+
+
+
+##  Command list
+```
+
+kubectl get pods
+kubectl describe pod 
+kubectl get deployment
+kubectl delete deployment ..........
+kubectl get deployment -A
+kubectl get events
+kubectl get nodes
+kubectl cluster-info dump
+kubectl get cm
+kubectl get cm proxy-config
+kubectl get cm proxy-config -oyaml
+kubectl get cm -A
+k9s -c pod
+```
+## Notes
+
 Setup
 
 * Docker installation
@@ -60,27 +100,14 @@ Resolution: Created fine on AKS so Problem was with Minikube. Delete all resourc
 
 
 
-##  Command list
-```
-
-kubectl get pods
-kubectl describe pod 
-kubectl get deployment
-kubectl delete deployment ..........
-kubectl get deployment -A
-kubectl get events
-kubectl get nodes
-kubectl cluster-info dump
-kubectl get cm
-kubectl get cm proxy-config
-kubectl get cm proxy-config -oyaml
-kubectl get cm -A
-k9s -c pod
-```
-## Notes
-
 * brew install k9s
 * brew install yamllint
 * brew install kube-score/tap/kube-score
 * kube-score score deployment.yaml
+
+Links
+
+* https://www.openpolicyagent.org/docs/latest/envoy-tutorial-standalone-envoy/
+
+* https://play.openpolicyagent.org/p/inCdnw6Dat
 
