@@ -35,7 +35,7 @@ Setup
 
 * Docker installation
 https://docs.docker.com/docker-for-mac/install/
-* Install OPA 
+* Install OPA https://github.com/MLstate/opalang/wiki/Building-Opa
 ```
 curl -L -o opa \
 https://openpolicyagent.org/downloads/latest/opa_darwin_amd64; \
