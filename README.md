@@ -29,9 +29,9 @@ As output, please write up your process, results, and any other thoughts you con
 
 ---------------------------------------------------------------------------------------------
 
-## Process
+## New policy solution
 
-New policy added to policy.rego
+New policy section added to policy.rego
 ```
 action_allowed {
   http_request.method == "DELETE"
@@ -39,22 +39,28 @@ action_allowed {
   glob.match("/people", ["/"], http_request.path)
 }
 ```
+This was run with the "admin token" as input in rego playground https://play.openpolicyagent.org/p/Om8GUFQNi7
 
-Test 1 in rego playground https://play.openpolicyagent.org/p/Om8GUFQNi7
-
+Test 1 evaluates the policy works with the new addition
 ![Test1](Evaluate_Delete.png)
 
+Test 2 evaluates just the new policy added
 ![Test 2](Evaluate_delete_selection.png)
 
+## Error
+I had the following error with 2 of the pods failing with the follwing error 
+
+* example-app-79cd94dbb8-skb9b   1/3     CrashLoopBackOff   14         12m
+
+Resolution: Created fine on AKS so Problem was with Minikube. Delete all resources and recreated them. This solved the issue
 
 
 
 
 
 
-
-
-##  Command list
+## Notes
+###  Command list to prove the containers built properly
 ```
 
 kubectl get pods
@@ -71,7 +77,7 @@ kubectl get cm proxy-config -oyaml
 kubectl get cm -A
 k9s -c pod
 ```
-## Notes
+
 
 Setup
 
@@ -93,11 +99,7 @@ chmod 755 ./opa
 --set services.play.url=https://play.openpolicyagent.org \
 --set bundles.play.resource=bundles/9WnO8Siyaw
 ```
-* Error
 
-pod error CrashLoopBackOff 
-
-Resolution: Created fine on AKS so Problem was with Minikube. Delete all resources and recreated them. This solved the issue
 
 
 
