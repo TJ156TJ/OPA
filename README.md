@@ -42,7 +42,9 @@ action_allowed {
 
 Test 1 in rego playground https://play.openpolicyagent.org/p/Om8GUFQNi7
 
-![Test1] (Evaluate_Delete.png)
+![Test1](Evaluate_Delete.png)
+
+![Test 2](Evaluate_delete_selection.png)
 
 
 
