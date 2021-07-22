@@ -29,6 +29,12 @@ action_allowed {
 }
 
 action_allowed {
+  http_request.method == "DELETE"
+  token.payload.role == "admin"
+  glob.match("/people", ["/"], http_request.path)
+}
+
+action_allowed {
   http_request.method == "POST"
   token.payload.role == "admin"
   glob.match("/people", ["/"], http_request.path)
