@@ -50,7 +50,7 @@ Test 2 evaluates just the new policy added
 ![Test 2](Evaluate_delete_selection.png)
 
 ## Error
-I had the following error with 2 of the pods failing with the follwing error 
+I had the following error with 2 of the pods failing as follows: 
 
 * example-app-79cd94dbb8-skb9b   1/3     CrashLoopBackOff   14         12m
 
