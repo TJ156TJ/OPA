@@ -27,6 +27,7 @@ Output
 
 As output, please write up your process, results, and any other thoughts you consider relevant. Also, please be sure to include the policy code and tests for the additional policy.
 
+---------------------------------------------------------------------------------------------
 
 ## Process
 
@@ -54,7 +55,7 @@ chmod 755 ./opa
 
 pod error CrashLoopBackOff 
 
-Resolution: Created fine on AKS so Problem was with Minikube. Delete all reousrces and recreate them solved the issue
+Resolution: Created fine on AKS so Problem was with Minikube. Delete all resources and recreated them. This solved the issue
 
 
 
